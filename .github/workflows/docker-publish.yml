@@ -17,8 +17,8 @@ jobs:
        include:
         - dockerfile: ./cuda-libtorch/Dockerfile
           image: cuda-libtorch
-        - dockerfile: ./cuda-libtorch/Dockerfile
-          image: cuda-libtorch
+        - dockerfile: ./cuda/Dockerfile
+          image: cuda
            
     steps:
       - name: checkout
@@ -37,5 +37,5 @@ jobs:
           file: ${{ matrix.dockerfile }}
           context: .
           image: ${{ matrix.image }}
-          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:latest
+          tags: ghcr.io/joren-vangoethem/${{ matrix.image }}:latest
           push: true
