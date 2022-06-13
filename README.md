@@ -6,6 +6,7 @@ images and what they have installed
 
 | image name | cpp-cuda-libtoch | Second Header |
 | ---------- | ---------------- | ------------- |
+| base image      | archlinux:latest            | :x:  |
 | cmake      | ✔️             | :x:  |
 | make       | ✔️             | :x:  |
 | gcc        | ✔️             | :x:  |
