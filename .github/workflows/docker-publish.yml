@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           dockerfile: ${{ matrix.dockerfile }}
-          context: .
+          # context: .
           image: ${{ matrix.image }}
           tags: ghcr.io/${{ matrix.image }}:latest
           push: true
