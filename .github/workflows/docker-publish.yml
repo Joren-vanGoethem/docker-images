@@ -15,8 +15,8 @@ jobs:
     strategy:
       matrix:
        include:
-         - dockerfile: cuda-libtorch/Dockerfile
-           image: "cuda-libtorch"
+        - dockerfile: cuda-libtorch/Dockerfile
+          image: "cuda-libtorch"
            
     steps:
       - name: checkout
@@ -35,5 +35,5 @@ jobs:
           dockerfile: ${{ matrix.dockerfile }}
           context: .
           image: ${{ matrix.image }}
-          tag: ghcr.io/${{ matrix.image }}:latest
+          tags: ghcr.io/${{ matrix.image }}:latest
           push: true
