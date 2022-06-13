@@ -15,9 +15,9 @@ jobs:
     strategy:
       matrix:
        include:
-        - dockerfile: ./cuda-libtorch/Dockerfile
+        - dockerfile: ./cuda-libtorch/dockerfile
           image: cuda-libtorch
-          context: ..
+          context: .
            
     steps:
       - name: checkout
