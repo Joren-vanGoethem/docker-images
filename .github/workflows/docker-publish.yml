@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
        include:
-        - dockerfile: ./cuda-libtorch/dockerfile
+        - dockerfile: ./cuda-libtorch/Dockerfile
           image: cuda-libtorch
           context: .
            
@@ -33,7 +33,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          dockerfile: ${{ matrix.dockerfile }}
+          file: ${{ matrix.dockerfile }}
           context: ${{ matrix.context }}
           image: ${{ matrix.image }}
           tags: ghcr.io/${{ matrix.image }}:latest
