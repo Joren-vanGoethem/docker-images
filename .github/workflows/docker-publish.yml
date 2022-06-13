@@ -16,7 +16,7 @@ jobs:
       matrix:
        include:
         - dockerfile: ./cuda-libtorch/Dockerfile
-          image: "cuda-libtorch"
+          image: cuda-libtorch
            
     steps:
       - name: checkout
