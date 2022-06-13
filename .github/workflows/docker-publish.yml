@@ -36,5 +36,5 @@ jobs:
           file: ${{ matrix.dockerfile }}
           context: ${{ matrix.context }}
           image: ${{ matrix.image }}
-          tags: ghcr.io/${{ matrix.image }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:latest
           push: true
