@@ -16,8 +16,6 @@ jobs:
         include:
           - dockerfile: ./cpp-cuda-libtorch/Dockerfile
             image: ghcr.io/username/cpp-cuda-libtorch
-          # - dockerfile: ./src/Dockerfile2
-          #   image: ghcr.io/username/image2
     permissions:
       contents: read
       packages: write
