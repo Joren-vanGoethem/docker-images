@@ -15,11 +15,10 @@ jobs:
       matrix:
         include:
           - dockerfile: ./cpp-cuda-libtorch/Dockerfile
-            image: ghcr.io/username/cpp-cuda-libtorch
+            image: ghcr.io/${{ github.repository_owner }}/cpp-cuda-libtorch
     permissions:
       contents: read
       packages: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
