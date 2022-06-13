@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -32,6 +32,6 @@ jobs:
         with:
           dockerfile: ${{ matrix.dockerfile }}
           context: .
-          image: : ${{ matrix.image }}
+          image: ${{ matrix.image }}
           tag: ghcr.io/${{ matrix.image }}:latest
           push: true
