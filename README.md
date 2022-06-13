@@ -1,4 +1,4 @@
-# ❌docker-images
+# docker-images
 
 images and what they have installed
 
