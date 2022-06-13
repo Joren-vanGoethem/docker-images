@@ -17,6 +17,7 @@ jobs:
        include:
         - dockerfile: ./cuda-libtorch/Dockerfile
           image: cuda-libtorch
+          context: ..
            
     steps:
       - name: checkout
@@ -33,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           dockerfile: ${{ matrix.dockerfile }}
-          # context: .
+          context: ${{ matrix.context }}
           image: ${{ matrix.image }}
           tags: ghcr.io/${{ matrix.image }}:latest
           push: true
