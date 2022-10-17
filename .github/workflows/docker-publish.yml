@@ -19,6 +19,8 @@ jobs:
           image: cuda-libtorch
         - dockerfile: ./cuda/Dockerfile
           image: cuda
+        - dockerfile: ./cpp/Dockerfile
+          image: cpp
            
     steps:
       - name: checkout
