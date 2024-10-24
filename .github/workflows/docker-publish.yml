@@ -15,12 +15,8 @@ jobs:
     strategy:
       matrix:
        include:
-        - dockerfile: ./cuda-libtorch/Dockerfile
-          image: cuda-libtorch
-        - dockerfile: ./cuda/Dockerfile
-          image: cuda
-        - dockerfile: ./cpp/Dockerfile
-          image: cpp
+        - dockerfile: ./github-actions-runner/Dockerfile
+          image: gh-actions-runner
            
     steps:
       - name: checkout
