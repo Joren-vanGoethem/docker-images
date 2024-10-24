@@ -14,7 +14,7 @@ RUN cd /home/docker && mkdir actions-runner && actions-runner \
 
 RUN chown -R docker ~docker && /home/docker/actions-runner/bin/installdependencies.shared
 
-COPY start.sh start.sh
+COPY github-actions-runner/start.sh start.sh
 
 RUN chmod +x start.sh
 
